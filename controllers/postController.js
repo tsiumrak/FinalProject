@@ -5,9 +5,9 @@ const getAllPosts = async (req, res) => {
   res.json(posts);
 };
 
-const getOnePost = (req, res) => {
+const getOnePost = async (req, res) => {
   const id = req.params.id;
-  const onePost = postsModel.getOnePostByDB(id);
+  const onePost = await Post.findOne(id);
   res.json(onePost);
 };
 
