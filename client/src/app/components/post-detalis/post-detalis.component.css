@@ -1,0 +1,10 @@
+td img{
+    width: 60px;
+}
+
+.scale{
+    transition: 3s; 
+   }
+.scale:hover {
+    transform: scale(6); 
+   }

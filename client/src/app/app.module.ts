@@ -14,6 +14,9 @@ import { AdminComponent } from "./components/admin/admin.component";
 import { LoginComponent } from "./components/login/login.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { PostDetalisComponent } from "./components/post-detalis/post-detalis.component";
+import { AdminPageComponent } from "./pages/admin-page/admin-page.component";
+import { ContentPageComponent } from "./pages/content-page/content-page.component";
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { HttpClientModule } from "@angular/common/http";
     SearchComponent,
     AdminComponent,
     LoginComponent,
+    PostDetalisComponent,
+    AdminPageComponent,
+    ContentPageComponent,
   ],
   imports: [
     BrowserModule,
