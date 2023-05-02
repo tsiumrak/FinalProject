@@ -1,15 +1,18 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const postsRouter = require("./routes/postsRouter");
-const PORT = 8000;
+const cors = require("cors");
+
 const app = express();
-const BD = "mongodb://localhost:27017";
+app.use(cors());
+
+const { SERVER_PORT, CONNECTION_STRING } = require("./config/comfig");
 
 app.use("/api/posts", postsRouter);
 
 const main = async () => {
-  await mongoose.connect(`${BD}/postsdb`);
-  app.listen(PORT);
+  await mongoose.connect(CONNECTION_STRING);
+  app.listen(SERVER_PORT);
   console.log("Datas send");
 };
 main();
