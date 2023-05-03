@@ -17,6 +17,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { PostDetalisComponent } from "./components/post-detalis/post-detalis.component";
 import { AdminPageComponent } from "./pages/admin-page/admin-page.component";
 import { ContentPageComponent } from "./pages/content-page/content-page.component";
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ContentPageComponent } from "./pages/content-page/content-page.componen
     PostDetalisComponent,
     AdminPageComponent,
     ContentPageComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,

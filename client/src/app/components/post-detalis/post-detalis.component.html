@@ -14,14 +14,16 @@
         <thead>
           <tr>
             <th scope="col">Name</th>
+            <th scope="col">Post name</th>
             <th scope="col">Profil photo</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let p of posts">
-            <a routerLink="/content-page/detalis/{{ p._id }}"
-              ><td>{{ p.name }}</td></a
-            >
+            <td (click)="onePost(p._id)" class="postName">{{ p.name }}</td>
+            <td>
+              <p>{{ p.title }}</p>
+            </td>
 
             <td>
               <img src="{{ p.photo }}" class="card-img-top scale" alt="..." />

@@ -32,10 +32,8 @@ export class PostDetalisComponent implements OnInit {
   back() {
     this.location.back();
   }
-  // onePost(_id: string): void {
-  //   let id = this.route.snapshot.params["id"];
-  //   id == _id;
-  //   this.router.navigate(["/content-page/detalis", _id]);
-  //   console.log(_id);
-  // }
+
+  onePost(_id: string) {
+    console.log(_id);
+  }
 }

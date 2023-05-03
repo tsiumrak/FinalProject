@@ -1,1 +1,53 @@
-<p>search works!</p>
+<!-- <div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <div class="form-floating mb-3">
+        <input
+          [(ngModel)]="searchPost"
+          type="text"
+          class="form-control validate"
+          id="floatingInput"
+        />
+        <label for="floatingInput">Search you Post</label>
+      </div>
+    </div>
+    <div class="col">
+      <ol class="list-group" *ngFor="let p of posts | search : searchPost">
+        <li class="list-group-item">{{ p.name }}</li>
+      </ol>
+    </div>
+  </div>
+</div> -->
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col col-3">
+      <div class="form-floating mb-3">
+        <input
+          [(ngModel)]="searchPost"
+          type="text"
+          class="form-control validate"
+          id="floatingInput"
+        />
+        <label for="floatingInput">Search you Post</label>
+      </div>
+    </div>
+    <div class="col col-9">
+      <div class="container">
+        <div class="row">
+          <div class="col" *ngFor="let p of posts | search : searchPost">
+            <div class="card" style="width: 18rem">
+              <img src="{{ p.photo }}" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">{{ p.name }}</h5>
+                <p class="card-text">
+                  {{ p.text }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
