@@ -1,0 +1,155 @@
+.mainDiv{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+.imgDiv{
+    background: linear-gradient(90deg, rgba(white, 1), rgba(#ddd, 1));
+    padding: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #FFF;
+}
+
+
+img{
+    float: left;
+    background: #fff;
+    width: 100%;
+    transform: translateX(-30%);
+    shape-outside: polygon(40% 0%, 50% 50%, 70% 100%);
+    shape-margin: 2rem;
+    width: 100%;
+    clip-path: polygon(30% 0, 70% 0, 100% 100%, 30% 100%);
+}
+p{
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+@media (min-width: 600px) {
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+&:first-child{
+    margin-top: 0;
+}
+
+
+
+
+/*  */
+
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+HTML, BODY {
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
+}
+
+BODY {
+  background-color: #222;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,.025) 10%, transparent 0),
+    linear-gradient(to bottom, rgba(255,255,255,.025) 10%, transparent 0),
+    linear-gradient(#111, #000);
+  background-size: .75em 100%, 100% .75em, 100% 100%;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.wrapper {
+  margin: auto;
+  padding: 7rem 7rem 2rem;
+}
+
+.container {
+  min-width: 500px;
+  max-width: 900px;
+  padding: 2rem;
+  background: #FFF;
+  hyphens: auto;
+}
+
+P {
+  margin: 0;
+  
+  & + & {
+    margin-top: 1rem;
+  }
+}
+
+.header {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  margin-top: calc(400px / -2.25 + 2rem);
+  margin-left: calc(400px / -2.25 + 2rem);
+  width: 400px;
+  height: 400px;
+  background-color: steelblue;
+  background-image: 
+    linear-gradient(to right top, rgba(255,255,255,.2) 50%, transparent 0),
+    linear-gradient(hotpink, tomato);
+  background-size: 2rem 100%, 100% 100%;
+  
+ 
+  clip-path: url(#my-clip-path);
+  shape-outside: polygon(-10% -10%, 87% -11%, 92% 14%, 88% 44%, 74% 71%, 51% 83%, 18% 92%, -11% 90%);
+  shape-margin: 1rem;
+  text-align: center;
+  color: #FFF;
+}
+
+H1 {
+  font-family: 'Pacifico', cursive;
+  font-weight: normal;
+  font-size: 5rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 0 rgba(0,0,0,.25);
+}
+
+.img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  shape-margin: 2rem;
+}
+
+.img--cakes {
+  float: right;
+  clear: right;
+  margin-top: -4rem;
+  margin-right: -4rem;
+  clip-path: polygon(36% 16%, 45% 0%, 100% 0%, 99% 100%, 72% 100%, 65% 92%, 56% 75%, 57% 62%, 43% 56%, 33% 42%, 37% 26%);
+  shape-outside: polygon(36% 16%, 45% 0%, 100% 0%, 99% 100%, 72% 100%, 65% 92%, 56% 75%, 57% 62%, 43% 56%, 33% 42%, 37% 26%) border-box;
+}
+
+.img--drinks {
+  float: left;
+  clear: left;
+  max-width: 25%;
+  margin-top: 1rem;
+  margin-left: -4rem;
+  clip-path: polygon(0% 0%, 30% 0%, 54% 5.14%, 76% 18%, 81% 60%, 64.79% 83%, 35% 99.29%, 0% 100%);
+  shape-outside: polygon(0% 0%, 30% 0%, 54% 5.14%, 76% 18%, 81% 60%, 64.79% 83%, 35% 99.29%, 0% 100%) border-box;
+}

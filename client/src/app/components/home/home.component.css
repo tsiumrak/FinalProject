@@ -1,8 +1,46 @@
-.conteinerDiv{
-    padding: 10px;
-}
+
 .timeDiv{
-    height: 100px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.boxDiv{
+    width: 500px;
+    height: 400px;
+    background-color: aliceblue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.topDiv{
+    text-align: left;
+    padding: 10px;
+    margin-left: 40px;
+}
+
+.buttonDiv button{
+    width: 400px;
+    margin: 10px;
+}
+.bottomDiv{
+    padding: 10px;
+    width: 420px;
     text-align: center;
-    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table{
+    margin-top: 10px;
+}
+.card{
+    background-color: aliceblue;
+}
+.tdButton button{
+    background-color: aliceblue;
+}
+.carouselDiv{
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }

@@ -1,8 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { AdminComponent } from "./components/admin/admin.component";
 import { HomeComponent } from "./components/home/home.component";
-import { LoginComponent } from "./components/login/login.component";
 import { NewsComponent } from "./components/news/news.component";
 import { PostDetalisComponent } from "./components/post-detalis/post-detalis.component";
 import { SearchComponent } from "./components/search/search.component";
@@ -19,11 +17,10 @@ const routes: Routes = [
     children: [
       { path: "home", component: HomeComponent },
       { path: "detalis/:id", component: PostDetalisComponent },
+
       { path: "news", component: NewsComponent },
       { path: "top", component: Top10Component },
       { path: "search", component: SearchComponent },
-      { path: "admin", component: AdminComponent },
-      { path: "login", component: LoginComponent },
     ],
   },
 

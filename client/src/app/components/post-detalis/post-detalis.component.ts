@@ -35,5 +35,6 @@ export class PostDetalisComponent implements OnInit {
 
   onePost(_id: string) {
     console.log(_id);
+    this.router.navigate(["/content-page/detalis", _id]);
   }
 }
