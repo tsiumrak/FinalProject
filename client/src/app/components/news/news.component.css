@@ -80,12 +80,14 @@ BODY {
   padding: 7rem 7rem 2rem;
 }
 
-.container {
+.containerDiv {
   min-width: 500px;
   max-width: 900px;
   padding: 2rem;
   background: #FFF;
   hyphens: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 P {
@@ -138,8 +140,8 @@ H1 {
 .img--cakes {
   float: right;
   clear: right;
-  margin-top: -4rem;
-  margin-right: -4rem;
+  margin-top: 8rem;
+  margin-right: -16rem;
   clip-path: polygon(36% 16%, 45% 0%, 100% 0%, 99% 100%, 72% 100%, 65% 92%, 56% 75%, 57% 62%, 43% 56%, 33% 42%, 37% 26%);
   shape-outside: polygon(36% 16%, 45% 0%, 100% 0%, 99% 100%, 72% 100%, 65% 92%, 56% 75%, 57% 62%, 43% 56%, 33% 42%, 37% 26%) border-box;
 }
@@ -149,7 +151,14 @@ H1 {
   clear: left;
   max-width: 25%;
   margin-top: 1rem;
-  margin-left: -4rem;
+  margin-left: -3rem;
   clip-path: polygon(0% 0%, 30% 0%, 54% 5.14%, 76% 18%, 81% 60%, 64.79% 83%, 35% 99.29%, 0% 100%);
   shape-outside: polygon(0% 0%, 30% 0%, 54% 5.14%, 76% 18%, 81% 60%, 64.79% 83%, 35% 99.29%, 0% 100%) border-box;
+}
+
+.contentDiv p{
+  font-size: smaller;
+}
+.card{
+  height: 370px;
 }

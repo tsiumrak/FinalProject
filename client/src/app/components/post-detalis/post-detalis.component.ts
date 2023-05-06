@@ -12,6 +12,8 @@ import { Location } from "@angular/common";
 export class PostDetalisComponent implements OnInit {
   post!: Post;
   posts: Post[] = [];
+  selectedPostId: string | undefined;
+  selectedPost: Post | undefined;
   constructor(
     private route: ActivatedRoute,
     private postsService: PostsService,
@@ -20,9 +22,12 @@ export class PostDetalisComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    let id = this.route.snapshot.params["id"];
-    this.postsService.getOnePost(id).subscribe((post: Post) => {
-      this.post = post;
+    this.route.paramMap.subscribe((params) => {
+      let id = params.get("id")!;
+      this.selectedPostId = id;
+      this.postsService.getOnePost(id).subscribe((post: Post) => {
+        this.post = post;
+      });
     });
     this.postsService.getPosts().subscribe((posts: Post[]) => {
       this.posts = posts;
@@ -33,8 +38,11 @@ export class PostDetalisComponent implements OnInit {
     this.location.back();
   }
 
-  onePost(_id: string) {
-    console.log(_id);
-    this.router.navigate(["/content-page/detalis", _id]);
+  postDetalis(postId: string): void {
+    this.selectedPostId = postId;
+  }
+
+  onePost(postId: string): void {
+    this.router.navigate(["/content-page/detalis", postId]);
   }
 }

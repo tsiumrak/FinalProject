@@ -1,0 +1,11 @@
+p{
+    text-align: justify;
+    font-size: small;
+}
+.card{
+    height: 500px;
+    margin-bottom: 10px;
+}
+.rowCard{
+    gap: 10px;
+}

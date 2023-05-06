@@ -1,0 +1,25 @@
+{
+    "greeting": "Hello",
+    "welcome": "Welcome to our website!",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "learnMore": "Learn More",
+    "services": {
+      "title": "Our Services",
+      "description": "We offer a range of services to meet your needs."
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "description": "See what our satisfied customers have to say about us."
+    },
+    "footer": {
+      "language": "Language",
+      "english": "English",
+      "spanish": "Spanish",
+      "french": "French",
+      "german": "German",
+      "italian": "Italian",
+      "portuguese": "Portuguese",
+    }
+  }
+  

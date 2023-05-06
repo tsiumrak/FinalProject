@@ -3,9 +3,34 @@ img{
 }
 .header{
     background-color: aliceblue;
-    padding-left: 20px;
-    padding-right: 20px;
+
 }
 span{
     color: rgb(30, 72, 224);
+}
+.blogDiv{
+    height: 300px;
+    border: 1px solid black;
+    background-image: url('https://jedfoundation.org/wp-content/uploads/2021/06/Create-a-Plan-to-Take-Care-of-Your-Mental-Health-scaled.jpeg');
+}
+.col{
+    padding: 20px;
+   
+}
+.row{
+    column-gap: 100px;
+}
+li {
+    margin-left: 10px;
+    position: relative;
+    left: 150px;
+}
+.box{
+    width: 300px;
+    height: 200px;
+    border: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    color: white;
 }

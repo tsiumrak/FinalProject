@@ -6,11 +6,11 @@ footer{
     margin-top: 20px;
 }
 i{
-    color: rgb(30, 72, 224);
+    color: rgb(108, 110, 116);
 }
 i:hover{
     font-size:larger;
-    color: red
+    color: rgb(30, 72, 224);
 }
 span{
     color: rgb(30, 72, 224);
@@ -27,3 +27,7 @@ span{
 p{
     line-height: 0.5;
 }
+h5{
+    color: rgb(30, 72, 224);
+}
+

@@ -11,3 +11,10 @@ td img{
    .postName:hover{
     color: blue;
    }
+.card{
+    height: 500px;
+}
+.card p{
+    text-align: justify;
+    font-size: small;
+}

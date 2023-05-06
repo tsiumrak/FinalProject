@@ -7,6 +7,9 @@ import { Post } from "../models/posts";
   providedIn: "root",
 })
 export class PostsService {
+  getPostById(selectedPostId: string | undefined): Post | undefined {
+    throw new Error("Method not implemented.");
+  }
   API_URL = "http://localhost:8000/api/posts";
 
   constructor(private http: HttpClient) {}

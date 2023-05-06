@@ -16,8 +16,11 @@ const routes: Routes = [
     component: ContentPageComponent,
     children: [
       { path: "home", component: HomeComponent },
-      { path: "detalis/:id", component: PostDetalisComponent },
-
+      {
+        path: "detalis/:id",
+        component: PostDetalisComponent,
+        pathMatch: "full",
+      },
       { path: "news", component: NewsComponent },
       { path: "top", component: Top10Component },
       { path: "search", component: SearchComponent },
