@@ -4,6 +4,7 @@ import { UsersService } from "../../services/users.service";
 import { v4 as uuidv4 } from "uuid";
 import { UserModel } from "src/app/models/user.model";
 import { Router } from "@angular/router";
+import { Location } from "@angular/common";
 
 @Component({
   selector: "app-register",
@@ -13,7 +14,11 @@ import { Router } from "@angular/router";
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
 
-  constructor(private usersService: UsersService, private router: Router) {}
+  constructor(
+    private usersService: UsersService,
+    private router: Router,
+    private location: Location
+  ) {}
 
   ngOnInit() {
     this.registerForm = new FormGroup({
@@ -39,5 +44,8 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(["/admin-page/login"]);
       });
     }
+  }
+  back() {
+    this.location.back();
   }
 }

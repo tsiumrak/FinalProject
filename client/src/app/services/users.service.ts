@@ -16,7 +16,7 @@ export class UsersService {
 
   login(email: string, password: string): Observable<any> {
     return this.http
-      .post<any>(`${this.apiUrl}/users/login`, { email, password })
+      .post<any>(`${this.apiUrl}/login`, { email, password })
       .pipe(
         map((response) => {
           if (response && response.token) {
@@ -40,16 +40,16 @@ export class UsersService {
     localStorage.removeItem("token");
   }
 
-  getAll(): Observable<UserModel[]> {
-    return this.http
-      .get<UserModel[]>(this.apiUrl)
-      .pipe(catchError(this.handleError));
-  }
+  // getAll(): Observable<UserModel[]> {
+  //   return this.http
+  //     .get<UserModel[]>(this.apiUrl)
+  //     .pipe(catchError(this.handleError));
+  // }
 
-  getById(id: string): Observable<UserModel> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.get<UserModel>(url).pipe(catchError(this.handleError));
-  }
+  // getById(id: string): Observable<UserModel> {
+  //   const url = `${this.apiUrl}/${id}`;
+  //   return this.http.get<UserModel>(url).pipe(catchError(this.handleError));
+  // }
 
   create(user: UserModel): Observable<UserModel> {
     return this.http
@@ -57,17 +57,17 @@ export class UsersService {
       .pipe(catchError(this.handleError));
   }
 
-  update(id: string, user: UserModel): Observable<UserModel> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http
-      .put<UserModel>(url, user)
-      .pipe(catchError(this.handleError));
-  }
+  // update(id: string, user: UserModel): Observable<UserModel> {
+  //   const url = `${this.apiUrl}/${id}`;
+  //   return this.http
+  //     .put<UserModel>(url, user)
+  //     .pipe(catchError(this.handleError));
+  // }
 
-  delete(id: string): Observable<void> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.delete<void>(url).pipe(catchError(this.handleError));
-  }
+  // delete(id: string): Observable<void> {
+  //   const url = `${this.apiUrl}/${id}`;
+  //   return this.http.delete<void>(url).pipe(catchError(this.handleError));
+  // }
 
   isAuthenticated(): boolean {
     return !!this.token;
