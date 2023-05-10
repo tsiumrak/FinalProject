@@ -1,5 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import {
+  FormControl,
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from "@angular/forms";
 import { Router } from "@angular/router";
 import { UsersService } from "../../services/users.service";
 
@@ -8,8 +13,11 @@ import { UsersService } from "../../services/users.service";
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.css"],
 })
-export class LoginComponent implements OnInit {
-  loginForm!: FormGroup;
+export class LoginComponent {
+  loginForm: FormGroup = new FormGroup({
+    email: new FormControl(null, Validators.required),
+    password: new FormControl(null, Validators.required),
+  });
 
   constructor(
     private formBuilder: FormBuilder,
@@ -18,15 +26,17 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    console.log(this.formBuilder);
     this.loginForm = this.formBuilder.group({
-      email: ["", Validators.required],
-      password: ["", Validators.required],
+      email: [""],
+      password: [""],
     });
   }
 
   onSubmit() {
     if (this.loginForm.valid) {
       const { email, password } = this.loginForm.value;
+      console.log("zzzz", email, password);
       this.usersService.login(email, password).subscribe(
         (response) => {
           console.log(response);
@@ -36,5 +46,10 @@ export class LoginComponent implements OnInit {
         }
       );
     }
+  }
+
+  newMember() {
+    console.log("register clicked");
+    this.router.navigate(["/admin-page/register"]);
   }
 }

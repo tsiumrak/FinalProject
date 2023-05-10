@@ -18,7 +18,10 @@ import { SearchPipe } from "./pipes/search.pipe";
 import { GoogleMapComponent } from "./components/google-map/google-map.component";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import { LanguageSelectorComponent } from './components/language-selector/language-selector.component';
+import { LanguageSelectorComponent } from "./components/language-selector/language-selector.component";
+import { ProfileComponent } from "./components/profile/profile.component";
+import { RegisterComponent } from "./components/register/register.component";
+import { LoginComponent } from "./components/login/login.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -40,6 +43,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SearchPipe,
     GoogleMapComponent,
     LanguageSelectorComponent,
+    ProfileComponent,
+    RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

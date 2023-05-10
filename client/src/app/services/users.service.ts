@@ -16,13 +16,13 @@ export class UsersService {
 
   login(email: string, password: string): Observable<any> {
     return this.http
-      .post<any>(`${this.apiUrl}/login`, { email, password })
+      .post<any>(`${this.apiUrl}/users/login`, { email, password })
       .pipe(
         map((response) => {
           if (response && response.token) {
             this.token = response.token;
             localStorage.setItem("token", response.token);
-            this.router.navigate(["/profile"]);
+            this.router.navigate(["/admin-page/profile"]);
           }
           return response;
         }),
@@ -32,7 +32,7 @@ export class UsersService {
 
   private handleError(error: HttpErrorResponse) {
     const message = error.error.errorMessage;
-    return throwError(() => new Error(message));
+    return throwError(message);
   }
 
   logout() {

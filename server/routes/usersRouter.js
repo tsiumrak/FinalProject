@@ -9,6 +9,6 @@ const jsonParser = express.json();
 
 usersRouter.get("/", getAllUsers);
 usersRouter.post("/", jsonParser, addNewUser);
-usersRouter.post("/api/login", jsonParser, getUserLogin);
+usersRouter.post("/login", jsonParser, getUserLogin);
 
 module.exports = usersRouter;

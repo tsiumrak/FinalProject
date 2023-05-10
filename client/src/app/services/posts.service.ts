@@ -10,7 +10,7 @@ export class PostsService {
   getPostById(selectedPostId: string | undefined): Post | undefined {
     throw new Error("Method not implemented.");
   }
-  API_URL = "http://localhost:8000/api/posts";
+  API_URL = "http://localhost:8080/api/posts";
 
   constructor(private http: HttpClient) {}
 

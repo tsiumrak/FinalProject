@@ -8,9 +8,20 @@ import { Top10Component } from "./components/top10/top10.component";
 import { AdminPageComponent } from "./pages/admin-page/admin-page.component";
 import { ContentPageComponent } from "./pages/content-page/content-page.component";
 import { NotFoundPageComponent } from "./pages/not-found-page/not-found-page.component";
+import { LoginComponent } from "./components/login/login.component";
+import { RegisterComponent } from "./components/register/register.component";
+import { ProfileComponent } from "./components/profile/profile.component";
 
 const routes: Routes = [
-  { path: "admin-page", component: AdminPageComponent },
+  {
+    path: "admin-page",
+    component: AdminPageComponent,
+    children: [
+      { path: "login", component: LoginComponent },
+      { path: "register", component: RegisterComponent },
+      { path: "profile", component: ProfileComponent },
+    ],
+  },
   {
     path: "content-page",
     component: ContentPageComponent,
