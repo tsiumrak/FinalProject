@@ -22,6 +22,8 @@ import { LanguageSelectorComponent } from "./components/language-selector/langua
 import { ProfileComponent } from "./components/profile/profile.component";
 import { LoginComponent } from "./components/login/login.component";
 import { RegisterComponent } from "./components/register/register.component";
+import { LikeComponent } from "./components/like/like.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -46,9 +48,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProfileComponent,
     LoginComponent,
     RegisterComponent,
+    LikeComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,

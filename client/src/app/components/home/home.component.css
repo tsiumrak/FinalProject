@@ -44,3 +44,10 @@ table{
     margin-right: auto;
     margin-top: 50px;
 }
+.likeDiv{
+text-align: right;
+}
+.likeDiv i{
+    font-size: 20px;
+    color: red;
+}
