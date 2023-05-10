@@ -13,7 +13,7 @@ import { UsersService } from "../../services/users.service";
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.css"],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   loginForm: FormGroup = new FormGroup({
     email: new FormControl(null, Validators.required),
     password: new FormControl(null, Validators.required),
@@ -26,10 +26,9 @@ export class LoginComponent {
   ) {}
 
   ngOnInit(): void {
-    console.log(this.formBuilder);
     this.loginForm = this.formBuilder.group({
-      email: [""],
-      password: [""],
+      email: ["", Validators.required],
+      password: ["", Validators.required],
     });
   }
 

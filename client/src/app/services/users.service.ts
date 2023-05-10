@@ -53,7 +53,7 @@ export class UsersService {
 
   create(user: UserModel): Observable<UserModel> {
     return this.http
-      .post<UserModel>(this.apiUrl, user)
+      .post<UserModel>(`${this.apiUrl}/users`, user)
       .pipe(catchError(this.handleError));
   }
 

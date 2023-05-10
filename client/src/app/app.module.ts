@@ -20,8 +20,8 @@ import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { LanguageSelectorComponent } from "./components/language-selector/language-selector.component";
 import { ProfileComponent } from "./components/profile/profile.component";
-import { RegisterComponent } from "./components/register/register.component";
 import { LoginComponent } from "./components/login/login.component";
+import { RegisterComponent } from "./components/register/register.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -44,8 +44,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     GoogleMapComponent,
     LanguageSelectorComponent,
     ProfileComponent,
-    RegisterComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
