@@ -30,6 +30,10 @@ export class LoginComponent implements OnInit {
       email: ["", Validators.required],
       password: ["", Validators.required],
     });
+
+    this.loginForm.valueChanges.subscribe((value) => {
+      console.log(value);
+    });
   }
 
   onSubmit() {
@@ -39,12 +43,14 @@ export class LoginComponent implements OnInit {
       this.usersService.login(email, password).subscribe(
         (response) => {
           console.log(response);
+          this.router.navigate(["/admin-page/profile"]);
         },
         (error) => {
           console.log(error);
         }
       );
     }
+    return false;
   }
 
   newMember() {

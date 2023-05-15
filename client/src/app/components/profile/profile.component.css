@@ -1,0 +1,36 @@
+.tableDiv{
+    margin-top: 100px;
+    padding: 20px;
+    text-align: justify;
+}
+td button{
+    margin: 10px;
+}
+.button{
+    width: 220px;
+}
+.name{
+    width: 200px;
+    text-align: center;
+}
+.title{
+    width: 200px;
+}
+th{
+    text-align: center;
+}
+button{
+    width: 200px;
+}
+.nav{
+margin-left: 500px;
+margin-top: 20px;
+}
+.createDiv{
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+}
+.createDiv button{
+    width: 300px;
+}

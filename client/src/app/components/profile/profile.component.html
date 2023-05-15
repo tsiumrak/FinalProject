@@ -1,1 +1,83 @@
-<p>profile works!</p>
+<div class="linksDiv">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a
+        routerLinkActive="active"
+        routerLink="/content-page/home"
+        class="nav-link"
+        aria-current="page"
+        >HOME</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        routerLinkActive="active"
+        routerLink="/content-page/news"
+        class="nav-link"
+        >NEWS</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        routerLinkActive="active"
+        routerLink="/content-page/top"
+        class="nav-link"
+        >TOP 10</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        routerLinkActive="active"
+        routerLink="/content-page/search"
+        class="nav-link"
+        >SEARCH <i class="bi bi-search-heart"></i
+      ></a>
+    </li>
+    <li class="nav-item">
+      <a
+        routerLinkActive="active"
+        routerLink="/admin-page/login"
+        class="nav-link"
+        >LOG IN</a
+      >
+    </li>
+  </ul>
+  <div class="createDiv">
+    <button type="button" class="btn btn-success" (click)="newPost()">
+      Create a new post
+    </button>
+  </div>
+</div>
+<div class="tableDiv">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">The author of the post</th>
+        <th scope="col">Name of the post</th>
+        <th scope="col">Content of the post</th>
+        <th scope="col">Photo of the author</th>
+        <th scope="col">Actions with posts</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let p of posts">
+        <td class="name">{{ p.name }}</td>
+        <td class="title">{{ p.title }}</td>
+        <td class="text">{{ p.text }}</td>
+        <td>
+          <img src="{{ p.photo }}" class="card-img-top scale" alt="..." />
+        </td>
+        <td class="button">
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="EditingClick(p._id)"
+          >
+            Edit post
+          </button>
+          <button type="button" class="btn btn-danger">Delete the post</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

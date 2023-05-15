@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, catchError } from "rxjs";
 import { Post } from "../models/posts";
 
 @Injectable({
@@ -20,5 +20,21 @@ export class PostsService {
 
   getOnePost(_id: string): Observable<Post> {
     return this.http.get(`${this.API_URL}/${_id}`) as Observable<Post>;
+  }
+  updateData(_id: string, updatedData: any): Observable<any> {
+    return this.http.put<any>(`${this.API_URL}/${_id}`, updatedData).pipe(
+      catchError((error: any) => {
+        console.error("Сталася помилка при оновленні даних:", error);
+        throw error;
+      })
+    );
+  }
+  createPost(newPost: any): Observable<any> {
+    return this.http.post<any>(this.API_URL, newPost).pipe(
+      catchError((error: any) => {
+        console.error("Сталася помилка при створенні нового поста:", error);
+        throw error;
+      })
+    );
   }
 }

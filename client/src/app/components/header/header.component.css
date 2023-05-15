@@ -10,7 +10,7 @@ span{
 }
 .blogDiv{
     height: 300px;
-    border: 1px solid black;
+    border: 1px solid rgb(244, 236, 236);
     background-image: url('https://jedfoundation.org/wp-content/uploads/2021/06/Create-a-Plan-to-Take-Care-of-Your-Mental-Health-scaled.jpeg');
 }
 .col{

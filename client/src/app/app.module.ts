@@ -7,7 +7,7 @@ import { BodyComponent } from "./components/body/body.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HomeComponent } from "./components/home/home.component";
 import { NewsComponent } from "./components/news/news.component";
-import { Top10Component } from "./components/top10/top10.component";
+
 import { SearchComponent } from "./components/search/search.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
@@ -24,6 +24,8 @@ import { LoginComponent } from "./components/login/login.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { LikeComponent } from "./components/like/like.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { EditingPostsComponent } from "./components/editing-posts/editing-posts.component";
+import { NewPostsComponent } from "./components/new-posts/new-posts.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -37,7 +39,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     HomeComponent,
     NewsComponent,
-    Top10Component,
+
     SearchComponent,
     PostDetalisComponent,
     AdminPageComponent,
@@ -49,6 +51,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LoginComponent,
     RegisterComponent,
     LikeComponent,
+    EditingPostsComponent,
+    NewPostsComponent,
   ],
   imports: [
     BrowserModule,
